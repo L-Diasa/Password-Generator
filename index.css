@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    background: #1C1C1C;
+    display: flex;
+    font-family: 'Inter', sans-serif;
+}
+
+main {
+    background: #1F2937;
+    min-width: 446px;
+    color: white;
+    margin: auto;
+    padding: 115px 52px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.025em;
+    font-family: 'Karla', sans-serif;
+    width: 354px;
+}
+
+h1 span {
+    color: #55F991;
+}
+
+p {
+    font-size: 20px;
+    color: #D5D4D8;
+}
+
+button {
+    border-radius: 6px;
+    border: none;
+    color: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#generate-pass-btn {
+    margin-top: 40px;
+    background: #10B981;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    font-family: inherit;
+    padding: 9px 17px 9px 15px;
+}
+
+.passwords {
+    margin-top: 50px;
+    padding-top: 50px;
+    width: 446px;
+    border-top: 1px solid #2F3E53;
+    display: flex;
+    justify-content: space-between;
+}
+
+.passwords button {
+    width: 211px;
+    background: #273549;
+    height: 39px;
+    color: #55F991;
+    position: relative;
+}
+
+.passwords button:before {
+    content: "Copy";
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #10B981;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: none;
+}
+
+.passwords button:after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    width: 7px;
+    height: 7px;
+    transform: rotate(45deg) translateX(-10%) translateY(70%);
+    background: #10B981;
+    display: none;
+}
+
+.passwords button:hover:before,
+.passwords button:hover:after, 
+.passwords button.active:after,
+.passwords button.active:before {
+    display: block;
+}
+
+.passwords button.active:before {
+    content: "Copied";
+}
